@@ -1,0 +1,19 @@
+{% extends 'static_pages/templates/_base.html' %}
+
+{% block page_title %}Home | {% endblock %}
+{% block meta_description %}Tester was built with FastMVC - the fastest way to get to production!{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="text-center">
+
+        <img height ="40" class = "me-2" src="https://www.craftwithsarah.com/wp-content/uploads/2022/06/layered-cat-svg-free.jpg"  >
+       <!-- <img src="{{ url_for('static', path='/img/logo.svg') }}" class="mb-3"> -->
+        <h1>Meow Tester</h1>
+        <b>Built with FastMVC for Cats</b><br>
+        <p>The fastest way to get to cats.</p>
+    </div>  
+</div>
+
+{% endblock %}

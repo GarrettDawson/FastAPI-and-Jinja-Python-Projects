@@ -1,0 +1,39 @@
+{% extends 'static_pages/templates/_base.html' %} {% block page_title %}Home |
+{% endblock %} {% block meta_description %}Tester was built with FastMVC - the
+fastest way to get to production!{% endblock %} {% block content %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for day in forecast.properties.periods %}
+  <div class="col">
+    <div class="card">
+      <img
+        src="{{ day.icon }}"
+        class="weather-icon"
+        alt="icon"
+        width="150"
+        height="150"
+        style="display: block; margin: auto; border-radius: 18px"
+      />
+      <div class="card-body">
+        <h5 class="card-title" style="color: blue">{{ day.name }}</h5>
+        <div class="card-text wtext" style = > <br />
+        Forecast, {{day.shortForecast}} <br />
+        <br />
+        Temperature, {{ day.temperature }} <br />
+        <br />
+        Wind speed, {{ day.windSpeed }} <br />
+        <br />
+        Wind direction, {{ day.windDirection }} <br />
+        <br />
+        <br />
+
+        Detailed forecast,
+        <br />
+
+        {{ day.detailedForecast }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<div>{% endblock %}</div>

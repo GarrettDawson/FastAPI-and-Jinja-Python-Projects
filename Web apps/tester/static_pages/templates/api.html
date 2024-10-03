@@ -1,0 +1,15 @@
+{% extends 'static_pages/templates/_base.html' %} {% block page_title %}Home |
+{% endblock %} {% block meta_description %}Tester was built with FastMVC - the
+fastest way to get to production!{% endblock %} {% block content %}
+
+<div class="container mt-5">
+  <h1><center>Cat Facts API</center></h1>
+  {% for fact in facts %}
+
+  <div class="card">
+    <div class="card-body">{{ fact.text}}</div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
